@@ -12,11 +12,9 @@ spec:
       labels:
         app: client-service
     spec:
-      imagePullSecrets:
-      - name: registry-secret
       containers:
       - name: client-service
-        image: nhatthai/client-service:latest
+        image: docker.yamibuy.com:8787/client-service:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8899
